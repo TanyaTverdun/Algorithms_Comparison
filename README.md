@@ -39,7 +39,7 @@
 
 ### Головне вікно
 
-![Головне вікно](img_readme_/main_window.png)
+![Головне вікно](img_readme/main_window.png)
 
 ## Як запустити
 
