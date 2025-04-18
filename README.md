@@ -1,67 +1,67 @@
-# Порівняння алгоритмів (десктопний застосунок на WPF)
+# Algorithm Comparison (Desktop Application in WPF)
 
-Порівняння алгоритмів — це десктопний застосунок, розроблений на основі WPF та C#, для аналізу та візуалізації продуктивності різних алгоритмів сортування. Користувач може вибирати розміри масивів, запускати алгоритми сортування, вимірювати час їх виконання та порівнювати результати за допомогою динамічної стовпчикової діаграми. Результати також зберігаються у текстових файлах для подальшого аналізу.
+Algorithm Comparison is a desktop application developed using WPF and C# for analyzing and visualizing the performance of various sorting algorithms. Users can select array sizes, run sorting algorithms, measure execution time, and compare results through a dynamic bar chart. All results are saved to text files for further analysis.
 
-## Основні можливості
+## How to Run
 
-- **Підтримувані алгоритми**  
-  Реалізовано сортування вибором, Шелла, швидке сортування, сортування злиттям та сортування підрахунком.
-
-- **Вибір розміру масиву**  
-  Користувач може обрати розмір масиву (наприклад: 512, 1024..) через випадаюче меню.
-
-- **Вимірювання продуктивності**  
-  Вимірюється та відображається час виконання кожного алгоритму в мілісекундах.
-
-- **Візуалізація**  
-  Використовується бібліотека LiveCharts для створення стовпчикової діаграми, що порівнює час виконання алгоритмів.
-
-- **Збереження результатів**  
-  Відсортовані масиви та метрики продуктивності записуються у текстові файли (наприклад, `file_1024.txt`).
-
-## Використані технології
-
-- **C#** та **WPF** (.NET)
-- **XAML** для дизайну інтерфейсу
-- **LiveCharts.Wpf** для побудови діаграм
-- Об’єктно-орієнтоване програмування (інкапсуляція, модульність)
-- Робота з файлами (читання та запис)
-- Обробка винятків
-- Реалізація алгоритмів сортування
-
-## Структура проєкту
-
-- `MainWindow.xaml` — головне вікно застосунку з інтерфейсом користувача (випадаюче меню, кнопка запуску, текстові поля, діаграма).
-- `MainWindow.xaml.cs` — логіка взаємодії з користувачем, виконання алгоритмів, оновлення діаграми та операції з файлами.
-- `Algorithms.cs` — містить реалізації алгоритмів сортування та допоміжні методи для створення масивів, роботи з файлами та перевірки сортування.
-
-## Знімок екрану
-
-### Головне вікно
-
-![Головне вікно](img_readme/main_window.png)
-
-## Як запустити
-
-1. Клонуйте репозиторій на локальну машину:
+1. Clone the repository to your local machine:
    ```bash
    https://github.com/TanyaTverdun/Algorithms_Comparison.git
    ```
-2. Відкрийте рішення (`Algorithms_Comparison.sln`) у **Visual Studio**.
-3. Встановіть пакет **LiveCharts.Wpf** через NuGet:
+2. Open the solution file (`Algorithms_Comparison.sln`) in **Visual Studio**.
+3. Install the **LiveCharts.Wpf** package via NuGet:
    ```bash
    Install-Package LiveCharts.Wpf
    ```
-4. Зберіть та запустіть проєкт.
-5. Виберіть розмір масиву, натисніть **Старт** і перегляньте результати в текстових полях, на діаграмі та у вихідному файлі.
+4. Build and run the project.
+5. Select an array size, click Start, and view the results in the text fields, chart, and output file.
 
-## Авторка
+## Key Features
 
-**Тетяна Твердун**  
-Студентка спеціальності "Інженерія програмного забезпечення", група ПЗ-22  
-Національний університет "Львівська політехніка"
+- **Supported Algorithms**  
+  Includes implementations of Selection Sort, Shell Sort, Quick Sort, Merge Sort, and Counting Sort.
 
-## Примітки
+- **Array Size Selection**  
+  Users can choose the array size (e.g., 512, 1024, etc.) from a dropdown menu.
 
-- Застосунок використовує тимчасовий файл (`temp`) для зберігання початкового масиву, щоб забезпечити однаковий вхід для всіх алгоритмів.
-- Час виконання залежить від продуктивності системи та розміру масиву.
+- **Performance Measurement**  
+  Execution time of each algorithm is measured and displayed in milliseconds.
+
+- **Visualization**  
+  Utilizes the LiveCharts library to display a bar chart comparing algorithm execution times.
+
+- **Result Saving**  
+  Sorted arrays and performance metrics are saved to text files (e.g., `file_1024.txt`).
+
+## Technologies Used
+
+- **C#** and **WPF** (.NET)
+- **XAML** for UI design
+- **LiveCharts.Wpf** for charting
+- Object-oriented programming (encapsulation, modularity)
+- File operations (read/write)
+- Exception handling
+- Implementation of sorting algorithms
+
+## Project Structure
+
+- `MainWindow.xaml` — the main application window containing the user interface (dropdown menu, start button, text fields, chart).
+- `MainWindow.xaml.cs` — handles user interaction logic, algorithm execution, chart updates, and file operations.
+- `Algorithms.cs` — contains sorting algorithm implementations and utility methods for array generation, file I/O, and result validation.
+
+## Screenshot
+
+### Main Window
+
+![Main Window](img_readme/main_window.png)
+
+## Author
+
+**Tetyana Tverdun**  
+Student of Software Engineering, Group PZ-22 
+Lviv Polytechnic National University
+
+## Notes
+
+- The application uses a temporary file (`temp`) to store the original array, ensuring that all algorithms process the same input.
+- Execution time may vary depending on system performance and array size.
